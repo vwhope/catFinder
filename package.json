@@ -1,0 +1,25 @@
+{
+  "name": "catFinder",
+  "version": "1.0.0",
+  "description": "an express-node application to find the cat that best matches your personality",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vwhope/catFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vwhope/catFinder/issues"
+  },
+  "homepage": "https://github.com/vwhope/catFinder#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "path": "^0.12.7"
+  }
+}
