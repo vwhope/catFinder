@@ -13,6 +13,7 @@ module.exports = function(app) {
   // the browser will respond with html page if available, if not will default to home page
   // here order matters?
   
+  // this says - show the survey.html file at this url: http://localhost:8080/survey
   // route for HTML Survey page
   app.get("/survey", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
@@ -22,5 +23,10 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
+
+ // could also define the catch-all route like this:
+ // app.use( function(req, res) {
+ //   res.sendFile(path.join(__dirname + '/../public/home.html'));
+ // });
   
 };
