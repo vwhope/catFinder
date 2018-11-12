@@ -6,7 +6,7 @@
 // =============================================================
 // 
 var express = require("express");
-var bodyParser = require('body-parser'); // used to format requests and responses
+//var bodyParser = require('body-parser'); // used to format requests and responses
 var path = require("path"); // you don't install this, just require it, it is included in Node.js
 // path formats url path info when delivering html to users  - use it in your routing. Ex.  (res.sendFile(path.join(__dirname, "yourfile.html")); 
 
@@ -17,11 +17,11 @@ var PORT = process.env.PORT || 8080; // the port will be EITHER what Heroku deci
 
 // Sets up the Express app to handle data parsing - am using bodyParser to do this instead of express
 app.use(express.urlencoded({ extended: true }));
-//app.use(express.json());
+app.use(express.json());
 
 // Sets up the body-Parser application
-app.use(bodyParser.json()); // support json encoded body
-app.use(bodyParser.urlencoded({ extended: false })); // this was false, support encoded body
+// app.use(bodyParser.json()); // support json encoded body
+// app.use(bodyParser.urlencoded({ extended: false })); // this was false, support encoded body
 
 //app.use(bodyParser.json({ type: 'application/*+json' }));
 //app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }));

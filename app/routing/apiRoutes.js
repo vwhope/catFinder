@@ -76,9 +76,6 @@ return {
 ////////////////////////////////////////////////////////////////////////////
 
 
-
-
-
 // 3. Creat/export function to share routing info for API GET/POST requests
 module.exports = function(app) {
     
@@ -127,7 +124,7 @@ module.exports = function(app) {
         console.log("Result: " + result.photo); // path user entered
    });
       
-} // END EXPORTS/app function
+} // END EXPORTS
 
 
 
