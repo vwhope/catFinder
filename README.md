@@ -9,7 +9,7 @@ is a full-stack web application that matches the user with a cat, based on surve
 * cat object properties contain cat name, photo url and responses to each survey question (scores array)
 
 **To run deployed version**
-![click here]()
+![click here](https://tranquil-inlet-73126.herokuapp.com/)
 
 **To run catFinder on your system follow steps below**
 
