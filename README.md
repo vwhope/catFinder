@@ -1,14 +1,14 @@
 # catFinder
-is a full-stack application that matches the user with a cat, based on survey results
+is a full-stack web application that matches the user with a cat, based on survey results
 
-* using node.js and express,
-* it takes in survey responses from the user,
-* compares them to an array of cats,
+* using node.js and express
+* it takes in survey responses from the user
+* compares them to an array of cats
 * then returns the name and photo of the cat that mostly closely matches their personality
 * the cats.js file contains the array of cat objects
-* each cat object has a name, photo url and responses to each survey question (scores array)
+* cat object properties contain cat name, photo url and responses to each survey question (scores array)
 
-**To run deployed verison**
+**To run deployed version**
 ![click here]()
 
 **To run catFinder on your system follow steps below**
