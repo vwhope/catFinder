@@ -1,6 +1,6 @@
 // Dependencies
 // =============================================================
-var path = require("path");
+var path = require('path');
 
 // Routes
 // =============================================================
@@ -11,17 +11,16 @@ module.exports = function(app) {
   // is triggered when user visits a path 
   // the path/route points the browser to a specific html page
   // the browser will respond with html page if available, if not will default to home page
-  // here order matters?
-  
-  // this says - show the survey.html file at this url: http://localhost:8080/survey
+    
+  // show the survey.html file at this url: http://localhost:8080/survey
   // route for HTML Survey page
-  app.get("/survey", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/survey.html"));
+  app.get('/survey', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/survey.html'));
   });
   
   // default catch-all route takes you to home page 
-  app.get("*", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
+  app.get('*', function(req, res) {
+    res.sendFile(path.join(__dirname, '../public/home.html'));
   });
 
  // could also define the catch-all route like this:

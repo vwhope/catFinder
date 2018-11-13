@@ -1,7 +1,7 @@
 // create API Routes for getting and posting data
 
 // 1. Load INITIAL data from file cats.js
-var cats = require("../data/cats");
+var cats = require('../data/cats');
 
 // 2. function definition to take in user survey scores, then return object with bestCatName, bestCatPhoto
 function getCatMatch(userScores) {
@@ -11,7 +11,7 @@ function getCatMatch(userScores) {
     var finalCompareArr = [];
     
     var catLength = cats.length;
-    console.log("Cat length: " + catLength);
+    console.log('Cat length: ' + catLength);
     
     // you have nested arrays, so have nested for loops to get data
     // FOR EACH CAT
@@ -76,7 +76,7 @@ module.exports = function(app) {
     // INSIDE function app which represents EXPRESS - define GET routes
     // This is the API GET request to  display ALL inital cats available for matching (JSON data from cats.js)
     // this says whenever user goes to the URL: http://localhost:8080/api/cats, then display the data from cats.js in json format
-    app.get("/api/cats", function(req, res) {
+    app.get('/api/cats', function(req, res) {
         res.json(cats);
     });
     
@@ -93,29 +93,29 @@ module.exports = function(app) {
         var userPhoto = req.body.photo;
         // var userScores = [];
         var userScores = req.body.scores;
-       console.log("req.body survey name: " + userName); 
-       console.log("req.body survey photo: " + userPhoto); 
-       console.log("req.body survey scores: " + req.body.scores); 
-       console.log("req.body survey scores: " + userScores[0]);
+       console.log('req.body survey name: ' + userName); 
+       console.log('req.body survey photo: ' + userPhoto); 
+       console.log('req.body survey scores: ' + req.body.scores); 
+       console.log('req.body survey scores: ' + userScores[0]);
 // at this point, I have the user's survey data and the userScores are in an array userScores
 // now perform logic to find best cat match
 
         var matchData = getCatMatch(userScores);
-        //console.log(getCatMatch.bestCatName + " " + getCatMatch.bestCatPhoto);
-        console.log("match name: " + matchData.bestCatName);
-        console.log("match photo: " + matchData.bestCatPhoto);
+        //console.log(getCatMatch.bestCatName + ' ' + getCatMatch.bestCatPhoto);
+        console.log('match name: ' + matchData.bestCatName);
+        console.log('match photo: ' + matchData.bestCatPhoto);
 // end logic to find best cat match        
         // use this after get best cat match - res.json MUST recieve an object so is why var result is created
          var result = {
-            "name": matchData.bestCatName,
-           // "name": userName,
-            "photo": matchData.bestCatPhoto
-           // "photo": userPhoto,
-           // "scores": userScores
+            'name': matchData.bestCatName,
+           // 'name': userName,
+            'photo': matchData.bestCatPhoto
+           // 'photo': userPhoto,
+           // 'scores': userScores
         }
        res.json(result)
-        console.log("Result: " + result.name);    // name user entered
-        console.log("Result: " + result.photo); // path user entered
+        console.log('Result: ' + result.name);    // name user entered
+        console.log('Result: ' + result.photo); // path user entered
    });
       
 } // END EXPORTS
