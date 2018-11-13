@@ -1,13 +1,9 @@
-// API Routes
+// create API Routes for getting and posting data
 
 // 1. Load INITIAL data from file cats.js
 var cats = require("../data/cats");
-// var bodyParser = require('body-parser');
-// var jsonParser = bodyParser.json();
-// var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
-////////////////////////////////////////////////////////////////////////////
-// 2. define function - takes in user survey scores, returns bestCatName, bestCatPhoto
+// 2. function definition to take in user survey scores, then return object with bestCatName, bestCatPhoto
 function getCatMatch(userScores) {
     var holdingArr = [];
     var diff = 0;
@@ -71,16 +67,14 @@ return {
     bestCatPhoto: bestCatPhoto
 };
 
-} // end getCatMatch
-
-////////////////////////////////////////////////////////////////////////////
+} // END functino definition getCatMatch
 
 
-// 3. Creat/export function to share routing info for API GET/POST requests
+// 3. Create/export function to share routing info for API GET/POST requests
 module.exports = function(app) {
     
-    // 3. INSIDE function app which represents EXPRESS - define your GET routes
-    // API GET request to  display ALL inital cats available for matching (JSON data from cats.js)
+    // INSIDE function app which represents EXPRESS - define GET routes
+    // This is the API GET request to  display ALL inital cats available for matching (JSON data from cats.js)
     // this says whenever user goes to the URL: http://localhost:8080/api/cats, then display the data from cats.js in json format
     app.get("/api/cats", function(req, res) {
         res.json(cats);
